@@ -5,12 +5,14 @@ module.exports = {
     res.send(await User.fetchAll());
   },
 
-  getUser(req, res) {
-    console.log("here");
+  async getUser(req, res) {
     const { id } = req.params;
-    const msg = `getting ${id} user`;
-    console.log(msg);
-    res.send(msg);
+    res.send(await User.fetch({ id }));
+  },
+
+  async getUserTransations(req, res) {
+    const { id } = req.params;
+    res.send(await new User({ id }).transactions());
   },
 
   saveUser(req, res) {

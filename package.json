@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "environment=development nodemon ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "environment=development jest"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "express": "^4.16.4",
     "knex": "^0.15.2",
     "pg": "^7.7.1"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
   }
 }
