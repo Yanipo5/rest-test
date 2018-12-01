@@ -2,6 +2,7 @@ require("dotenv").config();
 const app = require("express")();
 require("./utils/setGlobalHeaders.function.js")(app);
 const bodyParser = require("body-parser");
+const { encodeId } = require("./utils/crypto.js");
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {

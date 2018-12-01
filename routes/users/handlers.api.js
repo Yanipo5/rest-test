@@ -7,7 +7,7 @@ module.exports = {
 
   async getUser(req, res) {
     const { id } = req.params;
-    res.send(await User.fetch({ id }));
+    res.send(await new User({ id }).fetch());
   },
 
   async getUserTransations(req, res) {
