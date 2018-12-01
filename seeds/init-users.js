@@ -1,5 +1,6 @@
 const { User } = require("../models/index.js");
 exports.seed = async (knex, Promise) => {
+  await knex("transactions").del();
   await knex("users").del();
   const users = [
     { name: "dave", email: "dave@hotmail.com", password: "121SSASD22" },

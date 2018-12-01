@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "environment=development nodemon ",
+    "pretest": "environment=development knex seed:run",
     "test": "environment=development jest"
   },
   "author": "",
